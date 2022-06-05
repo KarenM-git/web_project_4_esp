@@ -1,0 +1,19 @@
+.submit-button {
+    background-color: black;
+    color: white;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 83%;
+    height: 50.15px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    opacity: .3;
+}
