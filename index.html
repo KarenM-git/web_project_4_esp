@@ -16,6 +16,8 @@
         </header>
         <main class="main">
             <section class="profile">
+
+                <div class="profile__container">
                 <img src="images/profile__image.jpg" class="profile__avatar" alt="imagen de perfil">
                 <div class="profile__info">
                     <div class="profile__name-container">
@@ -24,24 +26,28 @@
                     </div>
                     <p class="profile__description">Explorador</p>
                 </div>
+
+                </div>
+
+
+
                 <a class="add-button"></a>
 
             </section>
 
-            <form class="popup">
-                <div class="popup__container">
+            <div class="popup">
+                <form class="popup__container">
                     <h3 class="popup__title">Editar Perfil</h3>
                     <div class="popup__input-container">
                         <input type="text" placeholder="Nombre" class="input__text input__text_type_name">
                         <input type="text" placeholder="Sobre mí" class="input__text input__text_type_about-me">
                     </div>
                     <button class="submit-button">Guardar</button>
-                </div>
+                </form>
                 <a class="close-button"></a>
-            </form>
+            </div>
 
             <section class="cards">
-                <div class="cards__top-row">
                     <div class="cards__element">
                         <img src="images/element__1.jpg" class="cards__image" alt="">
                         <div class="cards__footer">
@@ -63,8 +69,6 @@
                             <a class="like-button"></a>
                         </div>
                     </div>
-                </div>
-                <div class="cards__bottom-row">
                     <div class="cards__element">
                         <img src="images/element__4.png" class="cards__image" alt="">
                         <div class="cards__footer">
@@ -86,7 +90,6 @@
                             <a class="like-button"></a>
                         </div>
                     </div>
-                </div>
             </section>
         </main>
         <footer class="footer">

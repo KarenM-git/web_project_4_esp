@@ -9,7 +9,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .profile__name {
         font-family: Inter;
         font-size: 22px;
