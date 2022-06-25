@@ -24,8 +24,8 @@ closeButton.addEventListener("click", closePopUp);
 
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
-    const nameInput = document.querySelector(".input__text_type_name");
-    const jobInput = document.querySelector(".input__text_type_about-me");
+    const nameInput = document.querySelector(".popup__input_type_name");
+    const jobInput = document.querySelector(".popup__input_type_about-me");
 
     profileName.textContent = nameInput.value;
     profileDescription.textContent = jobInput.value;
@@ -141,8 +141,8 @@ closeButtonAddPlace.addEventListener("click", closePopupAddPlace);
 function addNewCard(evt) {
     evt.preventDefault()
     const newCardsElement = cardsTemplate.querySelector(".cards__element").cloneNode(true)
-    const placeNameInput = document.querySelector(".input__text_type_place");
-    const placeImageInput = document.querySelector(".input__text_type_image");
+    const placeNameInput = document.querySelector(".popup__input_type_place");
+    const placeImageInput = document.querySelector(".popup__input_type_image");
     const ImgPopup = document.querySelector(".img-popup");
     const closeImageButton = document.querySelector(".img-popup__close");
     const popupImageShown = document.querySelector(".img-popup__image");
