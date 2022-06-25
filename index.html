@@ -37,61 +37,53 @@
                     <form class="popup__input-container">
                         <input type="text" placeholder="Nombre" class="input__text input__text_type_name">
                         <input type="text" placeholder="Sobre mí" class="input__text input__text_type_about-me">
-                        <button class="submit-button">Guardar</button>
-                    </form>
-                </div>
+                    </div>
+                    <button class="submit-button">Guardar</button>
+                </form>
                 <button class="close-button"></button>
             </div>
 
+
+            <div class="popup popup_add_place">
+                <form class="popup__container popup__container_add_place">
+                    <h3 class="popup__title popup__title_add_place">Nuevo Lugar</h3>
+                    <div class="popup__input-container popup__input-container_add_place">
+                        <input type="text" placeholder="Título" class="input__text input__text_type_place">
+                        <input type="text" placeholder="Enlace a la imagen" class="input__text input__text_type_image">
+                    </div>
+                    <button class="submit-button submit-button_add_place">Crear</button>
+                </form>
+                <button class="close-button close-button_add_place"></button>
+            </div>
+
+
             <section class="cards">
-                    <div class="cards__element">
-                        <img src="images/element__1.jpg" class="cards__image" alt="">
-                        <div class="cards__footer">
-                            <p class="cards__caption">Valle de Yosemite</p>
-                            <button class="like-button"></button>
-                        </div>
+
+                <div class="popup img-popup">
+                    <div class="img-popup__container">
+                        <img src="" class="img-popup__image" alt="">
+                        <p class="img-popup__caption"></p>
                     </div>
-                    <div class="cards__element">
-                        <img src="images/element__2.png" class="cards__image" alt="">
-                        <div class="cards__footer">
-                            <p class="cards__caption">Lago Louise</p>
-                            <button class="like-button"></button>
-                        </div>
-                    </div>
-                    <div class="cards__element">
-                        <img src="images/element__3.png" class="cards__image" alt="">
-                        <div class="cards__footer">
-                            <p class="cards__caption">Montañas Calvas</p>
-                            <button class="like-button"></button>
-                        </div>
-                    </div>
-                    <div class="cards__element">
-                        <img src="images/element__4.png" class="cards__image" alt="">
-                        <div class="cards__footer">
-                            <p class="cards__caption">Latemar</p>
-                            <button class="like-button"></button>
-                        </div>
-                    </div>
-                    <div class="cards__element">
-                        <img src="images/element__5.png" class="cards__image" alt="">
-                        <div class="cards__footer">
-                            <p class="cards__caption">Vanoise National Park</p>
-                            <button class="like-button"></button>
-                        </div>
-                    </div>
-                    <div class="cards__element">
-                        <img src="images/elemnet__6.png" class="cards__image" alt="">
-                        <div class="cards__footer">
-                            <p class="cards__caption">Lago di Braies</p>
-                            <button class="like-button"></button>
-                        </div>
-                    </div>
+                    <button class="close-button img-popup__close"></button>
+                </div>
+               
             </section>
         </main>
         <footer class="footer">
             <p class="copyright">© 2021 Alrededor de los EEUU</p>
         </footer>
     </div>
+    <template id="cards-template">
+        <div class="cards__element">
+            <img src="images/element__1.jpg" class="cards__image" alt="">
+            <div class="cards__footer">
+                <p class="cards__caption">Valle de Yosemite</p>
+                <button class="like-button"></button>
+            </div>
+            <button class="cards__delete-button"></button>
+        </div>
+    </template>
+
     <script src="scripts/script.js"></script>
 </body>
 

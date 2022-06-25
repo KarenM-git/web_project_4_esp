@@ -10,4 +10,5 @@
     display: none;
     justify-content: center;
     padding-top: 146px;
+    z-index: 99;
 }

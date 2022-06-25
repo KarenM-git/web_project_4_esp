@@ -8,6 +8,8 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
 }
 
 .cards__delete-button:hover {
