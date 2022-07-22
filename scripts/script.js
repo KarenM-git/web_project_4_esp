@@ -3,7 +3,7 @@ const popup = document.querySelector(".popup");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const closeButton = document.querySelector(".close-button");
-const formElement = document.querySelector(".submit-button");
+const formElement = document.querySelector(".popup__form");
 
 
 function showPopUp() {
@@ -22,6 +22,7 @@ closeButton.addEventListener("click", closePopUp);
 
 
 
+
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     const nameInput = document.querySelector(".popup__input_type_name");
@@ -34,7 +35,7 @@ function handleProfileFormSubmit(evt) {
 }
 
 
-formElement.addEventListener('click', handleProfileFormSubmit);
+formElement.addEventListener("submit", handleProfileFormSubmit);
 
 
 
@@ -119,7 +120,7 @@ initialCards.forEach(function (item) {
 const addButton = document.querySelector(".add-button");
 const popupAddPlace = document.querySelector(".popup_add_place");
 const closeButtonAddPlace = document.querySelector(".close-button_add_place");
-const SubmitPlace = document.querySelector(".submit-button_add_place");
+const SubmitPlace = document.querySelector(".popup__input-container_add_place");
 
 
 function showPopupAddPlace() {
@@ -139,7 +140,7 @@ closeButtonAddPlace.addEventListener("click", closePopupAddPlace);
 
 
 function addNewCard(evt) {
-    evt.preventDefault()
+    evt.preventDefault();
     const newCardsElement = cardsTemplate.querySelector(".cards__element").cloneNode(true)
     const placeNameInput = document.querySelector(".popup__input_type_place");
     const placeImageInput = document.querySelector(".popup__input_type_image");
@@ -158,6 +159,7 @@ function addNewCard(evt) {
 
     placeImageInput.value = ""
     placeNameInput.value = ""
+
 
 
     newCardsElement.querySelector(".like-button").addEventListener("click", function (evt) {
@@ -188,9 +190,27 @@ function addNewCard(evt) {
 
     closeImageButton.addEventListener("click", closeImage);
 
+    
+    document.addEventListener("keydown", function (evt) {
+        if (evt.key === "Escape") {
+            closeImage();
+        }
+
+    })
+
+   
+    document.onclick = function (evt) {
+        if (evt.target.id === "popup") {
+            closeImage();
+        }
+    }
+
+
+
 }
 
-SubmitPlace.addEventListener('click', addNewCard);
+
+SubmitPlace.addEventListener('submit', addNewCard);
 
 
 
