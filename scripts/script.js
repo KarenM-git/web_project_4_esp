@@ -199,7 +199,6 @@ SubmitPlace.addEventListener('submit', addNewCard);
 
 
 document.addEventListener("keydown", function (evt) {
-    console.log(evt.key)
     if (evt.key === "Escape") {
         document.querySelector(".img-popup").classList.remove("popup_opened");
     }
@@ -208,7 +207,7 @@ document.addEventListener("keydown", function (evt) {
 
 
 document.addEventListener("click", function (evt) {
-    if (evt.target.id === "popup") {
+    if (evt.target.classList.contains("popup")) {
         document.querySelector(".img-popup").classList.remove("popup_opened");
     }
 })

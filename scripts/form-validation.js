@@ -108,7 +108,7 @@ document.addEventListener("keydown", function (evt) {
 
 
 document.onclick = function (evt) {
-    if (evt.target.id === "popup"){
+    if (evt.target.classList.contains("popup")){
         closePopUp();
         closePopupAddPlace();
     }
