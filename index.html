@@ -34,11 +34,15 @@
             <div class="popup" id="popup">
                 <div class="popup__container">
                     <h3 class="popup__title">Editar Perfil</h3>
-                    <form class="popup__input-container popup__form" novalidate>
+                    <form class="popup__form" novalidate>
+                        <div class="popup__input-container">
                         <input type="text" placeholder="Nombre" id="name-input" minlength="2" maxlength="40" required class="popup__input popup__input_type_name">
                         <span class="name-input-error popup__error">  </span>
+                        </div>
+                        <div class="popup__input-container">
                         <input type="text" placeholder="Sobre mí" id="about-me" minlength="2" maxlength="200" required class="popup__input popup__input_type_about-me">
                         <span class="about-me-error popup__error"> </span>
+                        </div>
                         <button type="submit" class="submit-button">Guardar</button>
                     </form>
                 </div>
@@ -49,11 +53,15 @@
             <div class="popup popup_add_place" id="popup">
                 <div class="popup__container popup__container_add_place">
                     <h3 class="popup__title popup__title_add_place">Nuevo Lugar</h3>
-                    <form class="popup__input-container popup__input-container_add_place popup__form" novalidate>
+                    <form class="popup__form popup__form_add_place" novalidate>
+                        <div class="popup__input-container">
                         <input type="text" required id="place-input" placeholder="Título" minlength="2" maxlength="30" class="popup__input popup__input_type_place">
                         <span class="place-input-error popup__error"></span>
+                        </div>
+                        <div class="popup__input-container">
                         <input type="url" required id="url-input" placeholder="Enlace a la imagen" class="popup__input popup__input_type_image">
                         <span class="url-input-error popup__error"></span>
+                        </div>
                         <button class="submit-button submit-button_add_place">Crear</button>
                     </form>
                 </div>

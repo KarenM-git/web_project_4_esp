@@ -120,7 +120,7 @@ initialCards.forEach(function (item) {
 const addButton = document.querySelector(".add-button");
 const popupAddPlace = document.querySelector(".popup_add_place");
 const closeButtonAddPlace = document.querySelector(".close-button_add_place");
-const SubmitPlace = document.querySelector(".popup__input-container_add_place");
+const SubmitPlace = document.querySelector(".popup__form_add_place");
 
 
 function showPopupAddPlace() {
@@ -190,22 +190,6 @@ function addNewCard(evt) {
 
     closeImageButton.addEventListener("click", closeImage);
 
-    
-    document.addEventListener("keydown", function (evt) {
-        if (evt.key === "Escape") {
-            closeImage();
-        }
-
-    })
-
-   
-    document.onclick = function (evt) {
-        if (evt.target.id === "popup") {
-            closeImage();
-        }
-    }
-
-
 
 }
 
@@ -214,8 +198,20 @@ SubmitPlace.addEventListener('submit', addNewCard);
 
 
 
+document.addEventListener("keydown", function (evt) {
+    console.log(evt.key)
+    if (evt.key === "Escape") {
+        document.querySelector(".img-popup").classList.remove("popup_opened");
+    }
+    
+})
 
 
+document.addEventListener("click", function (evt) {
+    if (evt.target.id === "popup") {
+        document.querySelector(".img-popup").classList.remove("popup_opened");
+    }
+})
 
 
 
