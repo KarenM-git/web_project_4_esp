@@ -39,7 +39,7 @@ formElement.addEventListener("submit", handleProfileFormSubmit);
 
 
 
-const initialCards = [
+/*const initialCards = [
     {
         name: "Valle de Yosemite",
         link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
@@ -117,10 +117,10 @@ initialCards.forEach(function (item) {
 });
 
 
-const addButton = document.querySelector(".add-button");
+*/const addButton = document.querySelector(".add-button");
 const popupAddPlace = document.querySelector(".popup_add_place");
 const closeButtonAddPlace = document.querySelector(".close-button_add_place");
-const SubmitPlace = document.querySelector(".popup__form_add_place");
+//const SubmitPlace = document.querySelector(".popup__form_add_place");
 
 
 function showPopupAddPlace() {
@@ -136,6 +136,8 @@ function closePopupAddPlace() {
 }
 
 closeButtonAddPlace.addEventListener("click", closePopupAddPlace);
+
+/*
 
 
 
@@ -191,10 +193,10 @@ function addNewCard(evt) {
     closeImageButton.addEventListener("click", closeImage);
 
 
-}
+}*/
 
 
-SubmitPlace.addEventListener('submit', addNewCard);
+//SubmitPlace.addEventListener('submit', addNewCard);
 
 
 

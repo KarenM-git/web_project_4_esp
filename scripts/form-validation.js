@@ -1,7 +1,7 @@
 
 
 
-const showInputError = (formElement, inputElement, errorMessage) => {
+/*const showInputError = (formElement, inputElement, errorMessage) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add("popup__input_type_error");
 
@@ -95,7 +95,7 @@ enableValidation({
     errorClass: "popup__error_visible"
 }); 
 
-
+*/
 
 
 document.addEventListener("keydown", function (evt) {
