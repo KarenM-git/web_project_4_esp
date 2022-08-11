@@ -1,40 +1,5 @@
 
-
-const ImgPopup = document.querySelector(".img-popup");
-const closeImageButton = document.querySelector(".img-popup__close");
-const popupImageShown = document.querySelector(".img-popup__image");
-const popupImageCaption = document.querySelector(".img-popup__caption");
-const placeNameInput = document.querySelector(".popup__input_type_place");
-const placeImageInput = document.querySelector(".popup__input_type_image");
-const SubmitPlace = document.querySelector(".popup__form_add_place");
-
-
-const initialCards = [
-    {
-        name: "Valle de Yosemite",
-        link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-    },
-    {
-        name: "Lago Louise",
-        link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-    },
-    {
-        name: "Montañas Calvas",
-        link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-    },
-    {
-        name: "Latemar",
-        link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-    },
-    {
-        name: "Parque Nacional de la Vanoise",
-        link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-    },
-    {
-        name: "Lago di Braies",
-        link: "https://code.s3.yandex.net/web-code/lago.jpg"
-    }
-];
+import {ImgPopup, closeImageButton, popupImageShown, popupImageCaption, placeNameInput, placeImageInput, initialCards} from "./script.js"
 
 
 class Card{
@@ -62,6 +27,7 @@ class Card{
         this._element.querySelector(".cards__image").src = this._link;
         this._element.querySelector(".cards__caption").textContent = this._name;
         this._element.querySelector(".cards__image").alt = this._name;
+
 
         return this._element
     }
@@ -136,20 +102,18 @@ initialCards.forEach((item) => {
 })
 
 
-const renderNewCard = () => {
+export const renderNewCard = () => {
     const card = new newCard(placeNameInput, placeImageInput, "#cards-template");
     const cardElement = card.generateCard();
+    placeImageInput.value = "";
+    placeNameInput.value = "";
 
     document.querySelector(".cards").prepend(cardElement);
+
+    
    
 }
 
 
-SubmitPlace.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-    renderNewCard();
-    closePopupAddPlace();
-    placeImageInput.value = "";
-    placeNameInput.value = "";
-})
+
 
