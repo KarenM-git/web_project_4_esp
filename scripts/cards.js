@@ -1,8 +1,8 @@
 
-import {ImgPopup, closeImageButton, popupImageShown, popupImageCaption, placeNameInput, placeImageInput, initialCards} from "./script.js"
+import {ImgPopup, closeImageButton, popupImageShown, popupImageCaption } from "./script.js"
 
 
-class Card{
+export class Card{
     constructor(cardSelector) {
         this._cardSelector = cardSelector
         
@@ -69,7 +69,7 @@ class Card{
 }
 
 
-class initialCard extends Card {
+export class InitialCard extends Card {
     constructor(data, cardSelector) {
         super (cardSelector)
         this._link = data.link;
@@ -80,7 +80,7 @@ class initialCard extends Card {
 }
 
 
-class newCard extends Card {
+export class NewCard extends Card {
     constructor(nameInput, linkInput, cardSelector) {
         super(cardSelector)
         this._name = nameInput.value;
@@ -93,26 +93,10 @@ class newCard extends Card {
 }
 
 
-initialCards.forEach((item) => {
-    const card = new initialCard(item, "#cards-template");
-    const cardElement = card.generateCard();
-
-    document.querySelector(".cards").append(cardElement);
-
-})
 
 
-export const renderNewCard = () => {
-    const card = new newCard(placeNameInput, placeImageInput, "#cards-template");
-    const cardElement = card.generateCard();
-    placeImageInput.value = "";
-    placeNameInput.value = "";
 
-    document.querySelector(".cards").prepend(cardElement);
 
-    
-   
-}
 
 
 

@@ -1,6 +1,5 @@
-import { selectors } from "./script.js";
 
-class FormValidator {
+export class FormValidator {
     constructor(data, formSelector) {
         this._form = formSelector
         this._input = data.inputSelector;
@@ -102,18 +101,3 @@ class FormValidator {
 }
 
 
-const validateInfoForm = () => {
-    const form = new FormValidator(selectors, ".popup__form");
-    form.enableValidation();
-}
-
-
-
-const validatePlaceForm = () => {
-    const form = new FormValidator(selectors, ".popup__form_add_place");
-    form.enableValidation();
-}
-
-
-validateInfoForm();
-validatePlaceForm();

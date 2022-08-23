@@ -1,4 +1,4 @@
-import { renderNewCard } from "./cards.js";
+import { renderNewCard } from "./script.js";
 
 import { popup, editButton, profileName, profileDescription, closeButton, formElement, addButton, popupAddPlace, closeButtonAddPlace, SubmitPlace } from "./script.js";
 
