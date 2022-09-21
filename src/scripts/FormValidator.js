@@ -95,7 +95,6 @@ export class FormValidator {
                 evt.preventDefault();
                 this._toggleButtonState(inputList, buttonElement)
             });
-
             this._setEventListeners();
     }
 }

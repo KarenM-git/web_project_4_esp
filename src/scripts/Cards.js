@@ -1,10 +1,11 @@
 
-import {ImgPopup, closeImageButton, popupImageShown, popupImageCaption } from "./script.js"
+import { ImgPopup, closeImageButton, popupImageShown, popupImageCaption } from "./utils.js";
 
 
-export class Card{
-    constructor(cardSelector) {
-        this._cardSelector = cardSelector
+export class Card {
+    constructor(cardSelector, {handleCardClick}) {
+        this._cardSelector = cardSelector;
+        this._handleCardClick = handleCardClick;
         
     }
 
@@ -57,7 +58,7 @@ export class Card{
         })
 
         this._element.querySelector(".cards__image").addEventListener("click", ()=> {
-            this._handleOpenPopup();
+           this._handleCardClick(this._link, this._name);
 
         });
 
@@ -70,8 +71,8 @@ export class Card{
 
 
 export class InitialCard extends Card {
-    constructor(data, cardSelector) {
-        super (cardSelector)
+    constructor(data, cardSelector, {handleCardClick}) {
+        super (cardSelector,{handleCardClick})
         this._link = data.link;
         this._name = data.name;
     }
@@ -81,11 +82,10 @@ export class InitialCard extends Card {
 
 
 export class NewCard extends Card {
-    constructor(nameInput, linkInput, cardSelector) {
-        super(cardSelector)
-        this._name = nameInput.value;
-        this._link = linkInput.value;
-        
+    constructor(placeNameInput, placeImageInput, cardSelector, {handleCardClick}) {
+        super(cardSelector, {handleCardClick})
+        this._name = placeNameInput.value;
+        this._link = placeImageInput.value;
         
     }
 

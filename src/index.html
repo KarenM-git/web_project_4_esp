@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alrededor de los EEUU</title>
-    <link rel="stylesheet" href="index.css">
+    
 </head>
 
 <body class="body">
     <div class="page">
         <header class="header">
-            <img src="images/header__image.png" class="header__logo" alt="around the U.S. logo">
+            <img src="<%=require('./images/header__image.png')%>"class="header__logo" alt="around the U.S. logo">
         </header>
         <main class="main">
             <section class="profile">
 
                 <div class="profile__container">
-                <img src="images/profile__image.jpg" class="profile__avatar" alt="imagen de perfil">
+                <img src= "<%=require('./images/profile__image.jpg')%>" class="profile__avatar" alt="imagen de perfil">
                 <div class="profile__info">
                     <div class="profile__name-container">
                         <p class="profile__name">Jacques Cousteau</p>
@@ -87,7 +87,7 @@
     </div>
     <template id="cards-template">
         <div class="cards__element">
-            <img src="images/element__1.jpg" class="cards__image" alt="">
+            <img src="" class="cards__image" alt="">
             <div class="cards__footer">
                 <p class="cards__caption">Valle de Yosemite</p>
                 <button class="like-button"></button>
@@ -96,10 +96,8 @@
         </div>
     </template>
 
-    <script type="module" src="scripts/script.js"></script>
-    <script type="module" src="scripts/Cards.js"></script>
-    <script type="module" src="scripts/FormValidator.js"></script>
-    <script type="module" src="scripts/utils.js"></script>
+    
+    
     
 </body>
 

@@ -1,7 +1,7 @@
 .edit-button {
     width: 24px;
     height: 24px;
-    background-image: url(../../images/edit-button.png);
+    background-image: url(../../src/images/edit-button.png);
     background-position: center;
     object-fit: contain;
     background-color: black;

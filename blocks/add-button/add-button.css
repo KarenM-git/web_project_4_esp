@@ -3,7 +3,7 @@
     height: 50px;
     background-color: black;
     border: 1px white;
-    background-image: url(../../images/add-button.png);
+    background-image: url(../../src/images/add-button.png);
     background-position: center;
     object-fit: contain;
     background-repeat: no-repeat;
