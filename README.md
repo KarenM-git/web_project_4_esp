@@ -2,7 +2,7 @@
 
 ### Descripción general
 
-Proyecto final del Sprint 4
+Proyecto final del Sprint 8
     Formulario utilizando JavaScript  
 
 **Tecnologias Aplicadas**
@@ -10,6 +10,7 @@ Proyecto final del Sprint 4
 Html 
 Css 
 JavaScript
+Webpack
 
 **Enlace**
 https://karenm-git.github.io/web_project_4_esp/

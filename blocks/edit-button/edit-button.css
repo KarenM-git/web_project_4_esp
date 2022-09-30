@@ -1,23 +1,22 @@
 .edit-button {
-    width: 24px;
-    height: 24px;
-    background-image: url(../../src/images/edit-button.png);
-    background-position: center;
-    object-fit: contain;
-    background-color: black;
-    background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../src/images/edit-button.png);
+  background-position: center;
+  object-fit: contain;
+  background-color: black;
+  background-repeat: no-repeat;
 }
 
 .edit-button:hover {
-    opacity: .2;
-    cursor: pointer;
+  opacity: 0.2;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 400px) {
-    .edit-button {
-        width: 18px;
-        height: 18px;
-        background-size: contain;
-    }
-
+  .edit-button {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+  }
 }

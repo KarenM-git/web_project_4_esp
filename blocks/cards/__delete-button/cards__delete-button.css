@@ -1,18 +1,18 @@
 .cards__delete-button {
-    width: 18px;
-    height: 19.3px;
-    background-image: url(../../../src/images/delete-button.png);
-    position: absolute;
-    top: 18px;
-    right: 15px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
-    background-color: transparent;
+  width: 18px;
+  height: 19.3px;
+  background-image: url(../../../src/images/delete-button.png);
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
 }
 
 .cards__delete-button:hover {
-    opacity: .7;
-    cursor: pointer;
+  opacity: 0.7;
+  cursor: pointer;
 }

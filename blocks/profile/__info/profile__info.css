@@ -1,13 +1,12 @@
 .profile__info {
-    width: 417px;
-    flex-wrap: wrap;
+  width: 417px;
+  flex-wrap: wrap;
 }
 
-
 @media screen and (max-width: 600px) {
-    .profile__info {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+  .profile__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
