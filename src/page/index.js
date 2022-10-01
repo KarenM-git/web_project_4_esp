@@ -50,32 +50,35 @@ const setInfo = new UserInfo({
   ocupationSelector: ".profile__description",
 });
 
+const popupUserInfo = new PopupWithForm({
+  popupSelector: ".popup",
+  callback: () => {
+    setInfo.setUserInfo();
+    popupUserInfo.close();
+  },
+});
+popupUserInfo.setEventListeners();
 export const showPopUp = () => {
-  const popup = new PopupWithForm({
-    popupSelector: ".popup",
-    callback: () => {
-      setInfo.setUserInfo();
-      popup.close();
-    },
-  });
-  popup.open();
+  popupUserInfo.open();
 };
 
+const popup = new PopupWithForm({
+  popupSelector: ".popup_add_place",
+  callback: (item) => {
+    const card = new Card(item, "#cards-template", {
+      handleCardClick: (link, name) => {
+        const imagePopup = new PopupWithImage(".img-popup", link, name);
+        imagePopup.open();
+      },
+    });
+    const cardElement = card.generateCard();
+    renderCards.addItem(cardElement);
+    popup.close();
+  },
+});
+
+popup.setEventListeners();
 export const showPopupAddPlace = () => {
-  const popup = new PopupWithForm({
-    popupSelector: ".popup_add_place",
-    callback: (item) => {
-      const card = new Card(item, "#cards-template", {
-        handleCardClick: (link, name) => {
-          const imagePopup = new PopupWithImage(".img-popup", link, name);
-          imagePopup.open();
-        },
-      });
-      const cardElement = card.generateCard();
-      renderCards.addItem(cardElement);
-      popup.close();
-    },
-  });
   popup.open();
 };
 

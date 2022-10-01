@@ -3,7 +3,8 @@
 ### Descripción general
 
 Proyecto final del Sprint 8
-    Formulario utilizando JavaScript  
+   Página que permite agregar tarjetas con imagenes utilizando formularios,
+   y popups
 
 **Tecnologias Aplicadas**
 
