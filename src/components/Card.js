@@ -1,10 +1,3 @@
-import {
-  ImgPopup,
-  closeImageButton,
-  popupImageShown,
-  popupImageCaption,
-} from "../utils/utils.js";
-
 export class Card {
   constructor(data, cardSelector, { handleCardClick }) {
     this._name = data.name;
@@ -33,17 +26,6 @@ export class Card {
     return this._element;
   }
 
-  _handleOpenPopup() {
-    popupImageShown.src = this._link;
-    popupImageShown.alt = this._name;
-    popupImageCaption.textContent = this._name;
-    ImgPopup.classList.add("popup_opened");
-  }
-
-  _handleClosePopup() {
-    ImgPopup.classList.remove("popup_opened");
-  }
-
   _setEventListeners() {
     this._element
       .querySelector(".like-button")
@@ -62,8 +44,5 @@ export class Card {
       .addEventListener("click", () => {
         this._handleCardClick(this._link, this._name);
       });
-
-    closeImageButton.addEventListener("click", this._handleClosePopup);
   }
 }
-

@@ -1,5 +1,3 @@
-export const ImgPopup = document.querySelector(".img-popup");
-export const closeImageButton = document.querySelector(".img-popup__close");
 export const popupImageShown = document.querySelector(".img-popup__image");
 export const popupImageCaption = document.querySelector(".img-popup__caption");
 
