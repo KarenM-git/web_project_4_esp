@@ -13,18 +13,22 @@ import {
   selectors,
 } from "../utils/utils.js";
 
+function cards(item) {
+  const card = new Card(item, "#cards-template", {
+    handleCardClick: (link, name) => {
+      const imagePopup = new PopupWithImage(".img-popup", link, name);
+      imagePopup.open();
+    },
+  });
+  const cardElement = card.generateCard();
+  renderCards.addItem(cardElement);
+}
+
 const renderCards = new Section(
   {
     items: initialCards,
     renderer: (item) => {
-      const card = new Card(item, "#cards-template", {
-        handleCardClick: (link, name) => {
-          const imagePopup = new PopupWithImage(".img-popup", link, name);
-          imagePopup.open();
-        },
-      });
-      const cardElement = card.generateCard();
-      renderCards.addItem(cardElement);
+      cards(item);
     },
   },
   ".cards"
@@ -65,14 +69,7 @@ export const showPopUp = () => {
 const popup = new PopupWithForm({
   popupSelector: ".popup_add_place",
   callback: (item) => {
-    const card = new Card(item, "#cards-template", {
-      handleCardClick: (link, name) => {
-        const imagePopup = new PopupWithImage(".img-popup", link, name);
-        imagePopup.open();
-      },
-    });
-    const cardElement = card.generateCard();
-    renderCards.addItem(cardElement);
+    cards(item);
     popup.close();
   },
 });

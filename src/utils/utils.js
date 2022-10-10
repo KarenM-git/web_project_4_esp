@@ -1,14 +1,5 @@
-export const popupImageShown = document.querySelector(".img-popup__image");
-export const popupImageCaption = document.querySelector(".img-popup__caption");
-
-export const editButton = document.querySelector(".edit-button");
-export const addButton = document.querySelector(".add-button");
-export const placeNameInput = document.querySelector(
-  ".popup__input_type_place"
-);
-export const placeImageInput = document.querySelector(
-  ".popup__input_type_image"
-);
+export const editButton = document.querySelector(".edit-button"); //estas constantes no pertenecen a una clase 
+export const addButton = document.querySelector(".add-button"); //las utilizé para agregar Event Listeners al icono de editar y agregar
 
 export const initialCards = [
   {
