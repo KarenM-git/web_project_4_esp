@@ -1,6 +1,5 @@
-export const editButton = document.querySelector(".edit-button"); //estas constantes no pertenecen a una clase 
-export const addButton = document.querySelector(".add-button"); //las utilizé para agregar Event Listeners al icono de editar y agregar
-
+export const editButton = document.querySelector(".edit-button"); 
+export const addButton = document.querySelector(".add-button"); 
 export const initialCards = [
   {
     name: "Valle de Yosemite",

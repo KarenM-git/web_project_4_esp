@@ -13,7 +13,7 @@ import {
   selectors,
 } from "../utils/utils.js";
 
-function cards(item) {
+function createCards(item) {
   const card = new Card(item, "#cards-template", {
     handleCardClick: (link, name) => {
       const imagePopup = new PopupWithImage(".img-popup", link, name);
@@ -28,7 +28,7 @@ const renderCards = new Section(
   {
     items: initialCards,
     renderer: (item) => {
-      cards(item);
+      createCards(item);
     },
   },
   ".cards"
@@ -62,20 +62,20 @@ const popupUserInfo = new PopupWithForm({
   },
 });
 popupUserInfo.setEventListeners();
-export const showPopUp = () => {
+const showPopUp = () => {
   popupUserInfo.open();
 };
 
 const popup = new PopupWithForm({
   popupSelector: ".popup_add_place",
   callback: (item) => {
-    cards(item);
+    createCards(item);
     popup.close();
   },
 });
 
 popup.setEventListeners();
-export const showPopupAddPlace = () => {
+const showPopupAddPlace = () => {
   popup.open();
 };
 
