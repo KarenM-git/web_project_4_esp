@@ -1,8 +1,7 @@
 .profile__name-container {
   display: flex;
+  flex-direction: column;
   column-gap: 18px;
-  align-items: center;
-  width: 417px;
 }
 
 @media screen and (max-width: 600px) {

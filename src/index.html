@@ -19,17 +19,22 @@
       <main class="main">
         <section class="profile">
           <div class="profile__container">
-            <img
-              src="<%=require('./images/profile__image.jpg')%>"
-              class="profile__avatar"
-              alt="imagen de perfil"
-            />
+            <div class="profile__avatar-container">
+              <img
+                src=""
+                class="profile__avatar"
+                alt="imagen de perfil"
+              />
+              <div class="profile__avatar-overlay">
+                <span class="edit-icon"> </span>
+              </div>
+            </div>
             <div class="profile__info">
               <div class="profile__name-container">
-                <p class="profile__name">Jacques Cousteau</p>
-                <a class="edit-button"></a>
+                <p class="profile__name"></p>
+                <p class="profile__description"></p>
               </div>
-              <p class="profile__description">Explorador</p>
+              <a class="edit-button"></a>
             </div>
           </div>
           <button class="add-button"></button>
@@ -106,6 +111,36 @@
           </div>
           <button class="close-button close-button_add_place"></button>
         </div>
+        <div class="popup popup__delete-card">
+          <div class="popup__container popup__container_delete-card">
+            <h3 class="popup__title popup__title_delete-card">
+              ¿Estás seguro?
+            </h3>
+            <form class="popup__form">
+            <button class="submit-button">Sí</button>
+            </form>
+          </div>
+          <button class="close-button"></button>
+        </div>
+        <div class="popup popup_profile-pic">
+          <div class="popup__container popup__container_profile-pic">
+            <h3 class="popup__title popup__title_profile-pic">
+              Cambiar foto de perfil
+            </h3>
+            <form class="popup__form">
+              <input
+                type="url"
+                required
+                placeholder="Enlace a la nueva imagen de perfil"
+                class="popup__input popup__input_type_profile-pic"
+                id="avatar-input"
+              />
+              <span class="avatar-input-error popup__error"></span>
+              <button class="submit-button">Guardar</button>
+            </form>
+          </div>
+          <button class="close-button"></button>
+        </div>
 
         <section class="cards">
           <div class="popup img-popup">
@@ -126,7 +161,10 @@
         <img src=" " class="cards__image" alt="" />
         <div class="cards__footer">
           <p class="cards__caption">Valle de Yosemite</p>
-          <button class="like-button"></button>
+          <div class="like-container">
+            <button class="like-button"></button>
+            <p class="like-count">2</p>
+          </div>
         </div>
         <button class="cards__delete-button"></button>
       </div>
