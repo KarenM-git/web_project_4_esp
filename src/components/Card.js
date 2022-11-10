@@ -37,6 +37,7 @@ export class Card {
     this._element.querySelector(".cards__image").alt = this._name;
     this._element.querySelector(".like-count").textContent = this._likes.length;
     this.disableDeleteBttn();
+    this._checkIfIsLiked();
 
     return this._element;
   }
@@ -51,16 +52,31 @@ export class Card {
   }
 
   changeLikesNumber(data) {
-    return this._element.querySelector(".like-count").textContent = data.likes.length;
+    return (this._element.querySelector(".like-count").textContent =
+      data.likes.length);
   }
 
-  _changeLikeState(evt) {
+  _checkIfIsLiked() {
+    this._likes.forEach((like) => {
+      if (like._id === this._userId) {
+        this._isLiked = true;
+        this._element
+          .querySelector(".like-button")
+          .classList.add("like-button_active");
+      } else {
+        return;
+      }
+    });
+  }
+
+  _changeLikeState() {
     this._isLiked = !this._isLiked;
-    console.log(this._isLiked);
+  }
+
+  _likeIsActive(evt) {
     if (this._isLiked) {
       evt.target.classList.add("like-button_active");
-    }
-    else {
+    } else {
       evt.target.classList.remove("like-button_active");
     }
   }
@@ -69,8 +85,8 @@ export class Card {
     this._element
       .querySelector(".like-button")
       .addEventListener("click", (evt) => {
-        this._changeLikeState(evt);
-       // evt.target.classList.toggle("like-button_active");
+        this._changeLikeState();
+        this._likeIsActive(evt);
         this._handleCardLike(this._isLiked, this._cardId);
       });
 

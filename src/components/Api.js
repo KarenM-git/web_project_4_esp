@@ -1,5 +1,8 @@
 export class Api {
   constructor(options) {
+    /*this._username = document.querySelector( ".popup__input_type_name");
+     this._ocupation = document.querySelector( ".popup__input_type_about-me");
+     this._avatar = document.querySelector( ".popup__input_type_profile-pic");*/
     this._username = document.querySelector(".profile__name");
     this._ocupation = document.querySelector(".profile__description");
     this._avatar = document.querySelector(".popup__input_type_profile-pic");
@@ -63,7 +66,8 @@ export class Api {
         body: JSON.stringify({
           avatar: this._avatar.value,
         }),
-      }).then((res) => {
+      }
+    ).then((res) => {
       if (res.ok) {
         return res.json();
       }
@@ -91,13 +95,16 @@ export class Api {
   }
 
   deleteCard(cardId) {
-    return fetch("https://around.nomoreparties.co/v1/cohort-1-es/cards/" + cardId, {
-      method: "DELETE",
-      headers: {
-        authorization: "2be75b7b-0f52-418b-b96c-41c3ad1377b3",
-        "Content-Type": "application/json",
-      },
-    }).then((res) => {
+    return fetch(
+      "https://around.nomoreparties.co/v1/cohort-1-es/cards/" + cardId,
+      {
+        method: "DELETE",
+        headers: {
+          authorization: "2be75b7b-0f52-418b-b96c-41c3ad1377b3",
+          "Content-Type": "application/json",
+        },
+      }
+    ).then((res) => {
       if (res.ok) {
         return res.json();
       }

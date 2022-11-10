@@ -105,11 +105,12 @@ const userInfoPopup = new PopupWithForm({
     userInfoPopup.close();
     api
       .saveProfileData()
-      .then((res) => {
-        console.log(res);
-      })
+      .then(() => {})
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        userInfoPopup.renderLoading(false);
       });
   },
 });
@@ -124,6 +125,9 @@ const addPlacePopup = new PopupWithForm({
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        addPlacePopup.renderLoading(false);
       });
     addPlacePopup.close();
   },
@@ -135,11 +139,13 @@ const editAvatarPopup = new PopupWithForm({
     api
       .updateProfilePic()
       .then((res) => {
-        console.log(res);
-        setInfo.setUserInfo(res);
+        setInfo.setAvatar(res);
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        editAvatarPopup.renderLoading(false);
       });
     editAvatarPopup.close();
   },
@@ -165,9 +171,7 @@ const api = new Api();
 api
   .getInitialCards()
   .then((res) => {
-    const dataArray = res;
-    console.log(dataArray);
-    console.log(dataArray[0].owner._id);
+    const dataArray = res.reverse();
     renderCards.renderer(dataArray);
   })
   .catch((err) => {
@@ -177,9 +181,8 @@ api
 api
   .getUserData()
   .then((res) => {
-    console.log(res);
-    console.log(res._id);
     setInfo.setUserInfo(res);
+    setInfo.setAvatar(res);
   })
   .catch((err) => {
     console.log(err);
