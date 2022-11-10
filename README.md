@@ -2,16 +2,16 @@
 
 ### Descripción general
 
-Proyecto final del Sprint 8
+Proyecto final del Sprint 9
    Página que permite agregar tarjetas con imagenes utilizando formularios,
    y popups
 
 **Tecnologias Aplicadas**
 
-Html 
-Css 
-JavaScript
-Webpack
+- Html 
+- Css 
+- JavaScript
+- Webpack
 
 **Enlace**
  https://karenm-git.github.io/web_project_4_esp/
