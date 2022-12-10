@@ -5,7 +5,9 @@ export class UserInfo {
     this._avatar = document.querySelector(avatarSelector);
     this._nameInput = document.querySelector(".popup__input_type_name");
     this._jobInput = document.querySelector(".popup__input_type_about-me");
-    this._avatarInput = document.querySelector(".popup__input_type_profile-pic");
+    this._avatarInput = document.querySelector(
+      ".popup__input_type_profile-pic"
+    );
   }
 
   getUserInfo() {
@@ -18,12 +20,10 @@ export class UserInfo {
   setUserInfo(userInfo) {
     this._username.textContent = userInfo.name;
     this._ocupation.textContent = userInfo.about;
-   // this._avatar.src = userInfo.avatar;
-    
+    // this._avatar.src = userInfo.avatar;
   }
 
   setAvatar(data) {
     this._avatar.src = data.avatar;
   }
-
 }
